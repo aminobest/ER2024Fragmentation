@@ -1,0 +1,15 @@
+question,Fragmentation (Task Locality),Task Perspective
+" The activity ""Enter container information from documents"" needs to be executed before the activity ""Create new erp system entry""?",Local,Flow-based
+" The activity ""Inform customs about temporary storage"" can be executed in parallel with the activity ""Inform shipping company about temporary storage""?",Local,Flow-based
+" The activities ""Send detailed information on final destination"" and ""Load container onto train"" are mutually exclusive?",Local,Flow-based
+" The activities ""Request independent analysis of damage"" and ""Investigate cause of shake"" can be executed several times?",Local,Flow-based
+" The activity ""Drive container to scanning platform"" needs to be executed before the activity ""Attach accelerometer sensor""?",Global,Flow-based
+" The activity ""Document sensor id and container id""  can be executed in parallel with the activity ""Calibrate sensor""?",Global,Flow-based
+" The activities ""Request container deletion"" and ""Schedule transportation from temporary storage"" are mutually exclusive?",Global,Flow-based
+" The activities ""Document results of scan in erp file"" and ""Log into erp system"" can be executed several times?",Global,Flow-based
+" The activity ""Reset the sensor"" can only be executed after the activity ""Check intensity of the shake"" changes the state of the ""Sensor"" object to ""[signalling shake]""?",Local,Circumstantial
+" The activities ""Activate accelerometer sensor"" and ""Load container onto forklift truck"" can only be executed if the ""Container"" object is in the state ""[offloaded]""?",Local,Circumstantial
+" If the ""Container"" object is in state ""[in transition]""  the activity ""Collect container from scanning platform"" is executable, whereas the activity ""Collect container from temporary storage"" is not executable?",Local,Circumstantial
+" The activity ""Label container as scanned"" can only be executed after the activtiy ""Store file"" changes the state of the ""ERP file"" object to ""[saved]""?",Global,Circumstantial
+" The activities ""Request transportation from temporary storage to platform"" and ""Label container as shaken"" can only be executed if the ""Sensor"" object is in the state ""[idle]""?",Global,Circumstantial
+" If the ""Container"" object is in state ""[temporarily stored]""  the activity ""Bring container to storage unit"" is executable, whereas the activity ""Schedule transportation from scanning platform"" is not executable?",Global,Circumstantial
